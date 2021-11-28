@@ -16,7 +16,7 @@ import { FiKey } from "react-icons/fi";
 
 const Navbar = () => (
   <Flex p="2" borderBottom="1px" borderColor="gray.100">
-    <Box fontSize="3xl" color="blue.400" fontWeight="bold">
+    <Box fontSize="4xl" color="blue.400" fontWeight="bold">
       <Link href="/" paddingLeft="2">
         Reality
       </Link>
@@ -29,19 +29,32 @@ const Navbar = () => (
           icon={<FcMenu />}
           variant="outlined"
           color="red.400"
+          fontSize="2xl"
         />
         <MenuList>
           <Link href="/" passHref>
-            <MenuItem icon={<FcHome />}> Home </MenuItem>
+            <MenuItem icon={<FcHome />} fontSize="2xl">
+              {" "}
+              Home{" "}
+            </MenuItem>
           </Link>
           <Link href="/search" passHref>
-            <MenuItem icon={<BsSearch />}> Search </MenuItem>
+            <MenuItem icon={<BsSearch color="blue" />} fontSize="2xl">
+              {" "}
+              Search{" "}
+            </MenuItem>
           </Link>
           <Link href="/search?purpose=for-sale" passHref>
-            <MenuItem icon={<FaMoneyBillWave />}> Buy Property </MenuItem>
+            <MenuItem icon={<FaMoneyBillWave color="green" />} fontSize="2xl">
+              {" "}
+              Buy Property{" "}
+            </MenuItem>
           </Link>
           <Link href="/search?purpose=for-rent" passHref>
-            <MenuItem icon={<FiKey />}> Rent Property </MenuItem>
+            <MenuItem icon={<FiKey color="orange" />} fontSize="2xl">
+              {" "}
+              Rent Property{" "}
+            </MenuItem>
           </Link>
         </MenuList>
       </Menu>
